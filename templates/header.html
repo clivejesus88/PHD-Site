@@ -40,51 +40,51 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
         <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>phdsfamilynetworkinternational@gmail.com</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>phdfamilynetworkinternational@gmail.com</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
-                <a class="text-white-50 ms-3" href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a class="text-white-50 ms-3" href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a class="text-white-50 ms-3" href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a class="text-white-50 ms-3" href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="text-white-50 ms-3" href="https://chat.whatsapp.com/Lm3zPtaOY7VEfSVM9Tv7Q6"><i class="fab fa-whatsapp"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.youtube.com/@PHDS-FAMILY-NEWORK"><i class="fab fa-youtube"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/phds_family_network?igsh=YjN0c3Z6ODN5aDQx"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="{{ url_for('home') }}" class="navbar-brand ms-4 ms-lg-0">
-                <h1 class="fw-bold text-primary m-0">PHD's Family Network</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+            <a href="{{url_for('home')}}" class="navbar-brand ms-4 ms-lg-0">
+                <h1 class="fw-bold text-primary m-0">PHD's<span class="text-white"> Family Network</span></h1>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="{{ url_for('home') }}" class="nav-item nav-link">Home</a>
-                    <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
-                    <a href="{{ url_for('programs') }}" class="nav-item nav-link">Causes</a>
+                    <a href="{{ url_for('home')}}" class="nav-item nav-link active">Home</a>
+                    <a href="{{ url_for('about')}}" class="nav-item nav-link">About</a>
+                    <a href="{{ url_for('programs')}}" class="nav-item nav-link">Programs</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url_for('service') }}" class="dropdown-item">Service</a>
-                            <a href="{{ url_for('donate') }}" class="dropdown-item">Donate</a>
-                            <a href="{{ url_for('team') }}" class="dropdown-item">Our Team</a>
-                            <a href="{{ url_for('testimonial') }}" class="dropdown-item">Testimonial</a
+                            <!-- <a href="service.html" class="dropdown-item">Service</a> -->
+                            <!-- <a href="donate.html" class="dropdown-item">Donate</a> -->
+                            <a href="{{ url_for('team')}}" class="dropdown-item">Our Team</a>
+                            <a href="{{ url_for('testimonial')}}" class="dropdown-item">Testimonial</a>
+                            <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->
                         </div>
                     </div>
-                    <a href="{{ url_for('contact') }}" class="nav-item nav-link">Contact</a>
+                    <a href="{{ url_for('contact')}}" class="nav-item nav-link">Contact</a>
                 </div>
-                <div class="d-none d-lg-flex ms-2">
-                    <a class="btn btn-outline-primary py-2 px-3" href="{{ url_for('donate') }}">
+                <!-- <div class="d-none d-lg-flex ms-2">
+                    <a class="btn btn-outline-primary py-2 px-3" href="">
                         Donate Now
                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
                         </div>
                     </a>
-                </div>
+                </div> -->
             </div>
         </nav>
     </div>
