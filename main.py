@@ -27,9 +27,9 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/causes')
-def causes():
-    return render_template('causes.html')
+@app.route('/programs')
+def programs():
+    return render_template('programs.html')
 
 @app.route('/service')
 def service():
