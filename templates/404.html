@@ -1,45 +1,52 @@
-{% include 'header.html' %}
+{% extends 'base.html' %}
+{% block content %}
 
-
-    <!-- Page Header Start -->
-
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">404 Error</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">404 Error</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-outline-primary py-2 px-3" href="{{ url_for('home') }}">
-                        Go Back To Home
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
+<!-- Hero Banner Start -->
+<section class="team-hero-banner"
+    style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('{{ url_for('static', filename='assets/img/courses-2.jpg') }}') center/cover; background-attachment: fixed;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-text wow fadeInUp" data-wow-delay="0.2s">
+            <span class="hero-subtitle">Oops! Page Not Found</span>
+            <h1 class="hero-title">404 <span class="text-highlight">Error</span></h1>
+            <p class="hero-description">The page you're looking for seems to have vanished into the digital void. Don't
+                worry, our main site and all our programs are still here to help transform communities.</p>
+            <div class="hero-actions">
+                <button class="btn-hero primary" onclick="window.location.href='{{ url_for('home') }}';">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </button>
             </div>
         </div>
     </div>
-    <!-- 404 End -->
-        
+    <div class="hero-scroll-indicator">
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+    </div>
+</section>
+<!-- Hero Banner End -->
 
-{% include 'footer.html' %}
+<!-- 404 Content Start -->
+<section class="team-showcase">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
+                <h1 class="display-1">404</h1>
+                <h1 class="mb-4">Page Not Found</h1>
+                <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our
+                    home page or try to use a search?</p>
+                <a class="btn btn-outline-primary py-2 px-3" href="{{ url_for('home') }}">
+                    Go Back To Home
+                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 404 End -->
+
+{% endblock %}

@@ -1,0 +1,404 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Hero Banner Start -->
+<section class="team-hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-text wow fadeInUp" data-wow-delay="0.2s">
+            <span class="hero-subtitle">Transforming Communities Through Action</span>
+            <h1 class="hero-title">Our Programs <span class="text-highlight">Create Impact</span></h1>
+            <p class="hero-description">Comprehensive initiatives designed to address community needs, empower
+                individuals, and create sustainable change across Uganda through dedicated programs and services.</p>
+            <div class="hero-actions">
+                <a href="#programs-showcase" class="btn-hero primary">
+                    <i class="fas fa-arrow-down"></i>
+                    Explore Our Programs
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll-indicator">
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+    </div>
+</section>
+<!-- Hero Banner End -->
+
+<!-- Program Stats Start -->
+<section class="team-stats-section">
+    <div class="container">
+        <div class="stats-grid-elegant">
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.1s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="17">0</h3>
+                    <p class="stat-label-elegant">Active Programs</p>
+                </div>
+            </div>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.2s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="50000">0</h3>
+                    <p class="stat-label-elegant">Lives Impacted</p>
+                </div>
+            </div>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.3s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="25">0</h3>
+                    <p class="stat-label-elegant">Communities Served</p>
+                </div>
+            </div>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.4s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="1000">0</h3>
+                    <p class="stat-label-elegant">Volunteers Engaged</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Program Stats End -->
+
+<!-- Programs Showcase Start -->
+<section id="programs-showcase" class="team-showcase">
+    <div class="container">
+        <div class="section-header text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title">Our Impact Portfolio</h2>
+            <p class="section-subtitle">Strategic initiatives driving our 2025-2026 expansion</p>
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">
+                    <i class="fas fa-layer-group"></i>
+                </span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+        <div class="row g-4">
+            <!-- Program 1: Cause a Smile -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/program-1.jpg') }}" alt="Cause a Smile">
+                        <div class="program-overlay"></div>
+                        <span class="program-category"><i class="fas fa-graduation-cap"></i> Education</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title"><i class="fas fa-smile"></i> "Cause a Smile" Campaign</h3>
+                        <p class="program-desc">Our flagship education initiative providing scholastic materials and
+                            'Success Cards' to over 12 secondary schools, ensuring students feel valued and equipped.
+                        </p>
+                        <div class="program-features">
+                            <span class="feature-tag"><i class="fas fa-book"></i> Educational Materials</span>
+                            <span class="feature-tag"><i class="fas fa-award"></i> Success Cards</span>
+                            <span class="feature-tag"><i class="fas fa-school"></i> 12+ Schools</span>
+                        </div>
+                        <a href="{{ url_for('contact') }}" class="btn-link-premium">
+                            Partner With Us <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 2: Speech Academy -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/program-2.jpg') }}" alt="Speech Academy">
+                        <div class="program-overlay"></div>
+                        <span class="program-category"><i class="fas fa-microphone"></i> Communications</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title"><i class="fas fa-comments"></i> PHD Speech Academy</h3>
+                        <p class="program-desc">Democratizing public speaking skills through training and 'Speech
+                            Legends Tournament'. Building a pipeline of eloquent young leaders.</p>
+                        <div class="program-features">
+                            <span class="feature-tag"><i class="fas fa-chalkboard-teacher"></i> Public Speaking</span>
+                            <span class="feature-tag"><i class="fas fa-trophy"></i> Tournament</span>
+                            <span class="feature-tag"><i class="fas fa-user-graduate"></i> Youth Leadership</span>
+                        </div>
+                        <a href="{{ url_for('contact') }}" class="btn-link-premium">
+                            Join Academy <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 3: Music Department -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/program-3.jpg') }}" alt="Music Department">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Arts & Culture</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Music & Production</h3>
+                        <p class="program-desc">Creating original content like our official anthem to build cultural
+                            identity. A platform for musically-talented youth to showcase their craft.</p>
+                        <a href="#" class="btn-link-premium">
+                            Listen Now <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 4: Podcast -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/program-4.jpg') }}" alt="Podcast">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Media</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">PHD Podcast Launch</h3>
+                        <p class="program-desc">A new platform for thought leadership and storytelling. Amplifying our
+                            voice on social impact, youth development, and Kingdom leadership.</p>
+                        <a href="#" class="btn-link-premium">
+                            Stream Episodes <i class="fas fa-microphone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 5: Anthology -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/program-5.jpg') }}" alt="Anthology">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Literature</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">"Echoes of Grace"</h3>
+                        <p class="program-desc">Our upcoming Christian Anthology. A published collection of poems and
+                            essays articulating the theological depth of our network.</p>
+                        <a href="{{ url_for('contact') }}" class="btn-link-premium">
+                            Submit Work <i class="fas fa-pen-fancy"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 6: Community Outreach -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/program-6.jpg') }}" alt="Outreach">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Missions</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Community Missions</h3>
+                        <p class="program-desc">Direct engagement with communities through service, delivering
+                            collective action to address immediate social needs.</p>
+                        <a href="{{ url_for('donate') }}" class="btn-link-premium">
+                            Support Mission <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Programs Showcase End -->
+
+<!-- Program Categories Overview Start -->
+<section class="departments-overview">
+    <div class="container">
+        <div class="section-header text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title">Program Categories</h2>
+            <p class="section-subtitle">Specialized initiatives addressing diverse community needs</p>
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">
+                    <i class="fas fa-th-large"></i>
+                </span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+
+        <div class="departments-grid">
+            <div class="department-tile wow fadeInUp" data-wow-delay="0.1s">
+                <div class="department-icon-large">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="department-title">Education Programs</h3>
+                <p class="department-description">Empowering minds through quality education and skill development</p>
+                <div class="department-stats">
+                    <span class="dept-stat">3 Active Programs</span>
+                    <span class="dept-stat">500+ Beneficiaries</span>
+                </div>
+            </div>
+
+            <div class="department-tile wow fadeInUp" data-wow-delay="0.2s">
+                <div class="department-icon-large">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="department-title">Health Initiatives</h3>
+                <p class="department-description">Providing medical care and promoting community wellness</p>
+                <div class="department-stats">
+                    <span class="dept-stat">2 Active Programs</span>
+                    <span class="dept-stat">1,000+ Patients</span>
+                </div>
+            </div>
+
+            <div class="department-tile wow fadeInUp" data-wow-delay="0.3s">
+                <div class="department-icon-large">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3 class="department-title">Community Development</h3>
+                <p class="department-description">Building stronger communities through sustainable development</p>
+                <div class="department-stats">
+                    <span class="dept-stat">4 Active Programs</span>
+                    <span class="dept-stat">25 Communities</span>
+                </div>
+            </div>
+
+            <div class="department-tile wow fadeInUp" data-wow-delay="0.4s">
+                <div class="department-icon-large">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="department-title">Environmental Conservation</h3>
+                <p class="department-description">Protecting our environment for future generations</p>
+                <div class="department-stats">
+                    <span class="dept-stat">2 Active Programs</span>
+                    <span class="dept-stat">10,000 Trees Planted</span>
+                </div>
+            </div>
+
+            <div class="department-tile wow fadeInUp" data-wow-delay="0.5s">
+                <div class="department-icon-large">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="department-title">Youth Empowerment</h3>
+                <p class="department-description">Nurturing young leaders and empowering the next generation</p>
+                <div class="department-stats">
+                    <span class="dept-stat">3 Active Programs</span>
+                    <span class="dept-stat">2,000+ Youth</span>
+                </div>
+            </div>
+
+            <div class="department-tile wow fadeInUp" data-wow-delay="0.6s">
+                <div class="department-icon-large">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3 class="department-title">Support Services</h3>
+                <p class="department-description">Providing essential support and relief services</p>
+                <div class="department-stats">
+                    <span class="dept-stat">3 Active Programs</span>
+                    <span class="dept-stat">500+ Families</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Program Categories Overview End -->
+
+<!-- Join CTA Start -->
+<section class="join-cta-modern">
+    <div class="cta-pattern"></div>
+    <div class="container">
+        <div class="cta-content-modern text-center wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cta-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h2 class="cta-title">Ready to Make a Difference?</h2>
+            <p class="cta-subtitle">Join our programs and become part of the change transforming communities across
+                Uganda</p>
+            <div class="cta-buttons-modern">
+                <a class="cta-btn primary" href="{{ url_for('contact') }}">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    Get Involved
+                </a>
+                <a class="cta-btn secondary" href="{{ url_for('donate') }}">
+                    <i class="fas fa-donate"></i>
+                    Support Our Programs
+                </a>
+            </div>
+            <div class="cta-contact">
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> programs@phdsfamilynetwork.org</p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +256 123 456 789</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Join CTA End -->
+
+<!-- Program Details Modal -->
+<div class="modal fade" id="programModal" tabindex="-1" aria-labelledby="programModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="programModalLabel">Program Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="programModalBody">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary">Get Involved</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Counter animation
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number-elegant');
+        const speed = 200;
+
+        counters.forEach(counter => {
+            const animate = () => {
+                const value = +counter.getAttribute('data-count');
+                const data = +counter.innerText;
+                const time = value / speed;
+
+                if (data < value) {
+                    counter.innerText = Math.ceil(data + time);
+                    setTimeout(animate, 1);
+                } else {
+                    counter.innerText = value.toLocaleString();
+                }
+            }
+
+            animate();
+        });
+    }
+
+    // Trigger counter animation when in viewport
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const statsSection = document.querySelector('.team-stats-section');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+</script>
+{% endblock %}

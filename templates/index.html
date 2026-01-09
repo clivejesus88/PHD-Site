@@ -1,439 +1,574 @@
-{% include 'header.html' %}
+{% extends 'base.html' %}
+{% block content %}
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="{{ url_for('static', filename='assets/img/carousel-1.jpg') }}" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Let's Change The World With Humanity</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="{{ url_for('about') }}">
-                                        Learn More
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="{{ url_for('static', filename='assets/img/carousel-2.jpg') }}" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Let's Save More Lifes With Our Helping Hand</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="{{ url_for('about') }}">
-                                        Learn More
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Hero Banner Start -->
+<section class="team-hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-text wow fadeInUp" data-wow-delay="0.2s">
+            <span class="hero-subtitle">Transforming Lives Across Uganda</span>
+            <h1 class="hero-title">Together We <span class="text-highlight">Make Change</span> Happen</h1>
+            <p class="hero-description">The PHD's Family Network International is a welcoming organisation where
+                everyone is welcome for the glory of God.</p>
+            <div class="hero-actions">
+                <a class="btn-hero primary" href="{{ url_for('about') }}">
+                    <i class="fas fa-arrow-right"></i>
+                    Learn More
+                </a>
+                <a class="btn-hero secondary" href="{{ url_for('donate') }}">
+                    <i class="fas fa-heart"></i>
+                    Donate Now
+                </a>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
-    <!-- Carousel End -->
+    <div class="hero-scroll-indicator">
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+    </div>
+</section>
+<!-- Hero Banner End -->
 
-
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100 pt-5 pe-5" src="{{ url_for('static', filename='assets/img/image1.jpg') }}" alt="" style="object-fit: cover;">
-                        <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="{{ url_for('static', filename='assets/img/image2.jpg') }}" alt="" style="width: 150px; height: 150px;">
+<!-- Mission, Vision & Goals Start -->
+<!-- Mission, Vision & Goals Start -->
+<section class="section-premium">
+    <div class="container">
+        <div class="section-header text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title">Our Strategic Direction</h2>
+            <p class="section-subtitle">Guided by the "Humble Beginnings" Mandate</p>
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">
+                    <i class="fas fa-compass"></i>
+                </span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
+                    <h3 class="mission-title">Our Vision</h3>
+                    <p class="mission-text">To PULL HEAVEN DOWN THROUGHOUT THE ALL WORLD AS WE EMBRACE THE CALL TO
+                        MINISTRY BY EMPOWER YOUNG PEOPLE, YOUTH and TEENS in a Well, and Thriving in God’s Plan as they
+                        fulfil their God-Given Potential through their God Given Talent’s.</p>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-                        <h1 class="display-6 mb-5">We Help People In Need Around The World</h1>
-                        <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                            <p class="text-dark mb-2">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
-                            <span class="text-primary">Jhon Doe, Founder</span>
-                        </div>
-                        <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <a class="btn btn-primary py-2 px-3 me-3" href="{{ url_for('about') }}">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
-                        <a class="btn btn-outline-primary py-2 px-3" href="{{ url_for('contact') }}">
-                            Contact Us
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
                     </div>
+                    <h3 class="mission-title">Our Mission</h3>
+                    <ul class="list-unstyled mission-text text-start ms-4">
+                        <li><i class="fas fa-check text-accent me-2"></i> Connect People</li>
+                        <li><i class="fas fa-check text-accent me-2"></i> Build Quality Capacity</li>
+                        <li><i class="fas fa-check text-accent me-2"></i> Deliver Collective Action</li>
+                        <li><i class="fas fa-check text-accent me-2"></i> Maximize Youth Contributions</li>
+                        <li><i class="fas fa-check text-accent me-2"></i> Talent Cultivation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="mission-title">Our Goal</h3>
+                    <p class="mission-text">To help create a shared vision amongst individual members that indicates
+                        common priorities so that together we provide quality training and creative solutions to
+                        persistent problems, promoting the role of Young Passionate Ministers.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+</section>
+<!-- Mission, Vision & Goals End -->
 
-
-    <!-- Causes Start -->
-    <div class="container-xxl bg-light my-5 py-5">
-        <div class="container py-5">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Feature Causes</div>
-                <h1 class="display-6 mb-5">Every Child Deserves The Opportunity To Learn</h1>
+<!-- About Start -->
+<section class="team-showcase">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="member-card">
+                    <div class="member-visual"
+                        style="background: linear-gradient(135deg, var(--primary), var(--primary-light)); height: 300px;">
+                        <div class="member-accent"></div>
+                        <div class="member-role-badge">
+                            <span>Our Mission</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <h3 class="member-name">We Help People In Need Around The World</h3>
+                        <p class="member-bio">The PHD's Family Network International is dedicated to transforming
+                            communities through comprehensive programs, sustainable development, and unwavering
+                            commitment to positive change across Uganda.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Community Development</span>
+                            <span class="expertise-tag">Humanitarian Aid</span>
+                            <span class="expertise-tag">Sustainable Impact</span>
+                        </div>
+                        <div class="member-contact">
+                            <a href="{{ url_for('about') }}" class="contact-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="{{ url_for('contact') }}" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
-                        <div class="text-center p-4 pt-0">
-                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
-                                <small>Public Speaking</small>
-                            </div>
-                            <h5 class="mb-3">PHD Speech Academy</h5>
-                            <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
-                            <div class="causes-progress bg-light p-3 pt-2">
-                                <div class="d-flex justify-content-between">
-                                    <p class="text-dark">$10,000 <small class="text-body">Goal</small></p>
-                                    <p class="text-dark">$9,542 <small class="text-body">Raised</small></p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="{{ url_for('static', filename='assets/img/cause1.jpg') }}" alt="">
-                            <div class="causes-overlay">
-                                <a class="btn btn-outline-primary" href="{{ url_for('causes') }}">
-                                    Read More
-                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </div>
-                                </a>
-                            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="member-card">
+                    <div class="member-visual"
+                        style="background: linear-gradient(135deg, var(--accent), var(--primary-light)); height: 300px;">
+                        <div class="member-accent"></div>
+                        <div class="member-role-badge">
+                            <span>Leadership</span>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
-                        <div class="text-center p-4 pt-0">
-                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
-                                <small>Pure Water</small>
-                            </div>
-                            <h5 class="mb-3">Ensure Pure Drinking Water</h5>
-                            <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
-                            <div class="causes-progress bg-light p-3 pt-2">
-                                <div class="d-flex justify-content-between">
-                                    <p class="text-dark">$10,000 <small class="text-body">Goal</small></p>
-                                    <p class="text-dark">$9,542 <small class="text-body">Raised</small></p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="member-details">
+                        <h3 class="member-name">Asasira Blessed Moses, Chief Founder</h3>
+                        <p class="member-bio">Visionary leader with extensive experience in community development and
+                            nonprofit management, guiding our mission with passion and dedication.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Strategic Planning</span>
+                            <span class="expertise-tag">Leadership</span>
+                            <span class="expertise-tag">Community Impact</span>
                         </div>
-                        <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="{{ url_for('static', filename='assets/img/courses-2.jpg') }}" alt="">
-                            <div class="causes-overlay">
-                                <a class="btn btn-outline-primary" href="{{ url_for('causes') }}">
-                                    Read More
-                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
-                        <div class="text-center p-4 pt-0">
-                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
-                                <small>Healthy Life</small>
-                            </div>
-                            <h5 class="mb-3">Ensure Medical Treatment</h5>
-                            <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
-                            <div class="causes-progress bg-light p-3 pt-2">
-                                <div class="d-flex justify-content-between">
-                                    <p class="text-dark">$10,000 <small class="text-body">Goal</small></p>
-                                    <p class="text-dark">$9,542 <small class="text-body">Raised</small></p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="{{ url_for('static', filename='assets/img/courses-3.jpg') }}" alt="">
-                            <div class="causes-overlay">
-                                <a class="btn btn-outline-primary" href="{{ url_for('causes') }}">
-                                    Read More
-                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="member-contact">
+                            <a href="{{ url_for('about') }}" class="contact-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="{{ url_for('contact') }}" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Causes End -->
+</section>
+<!-- About End -->
 
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-                <h1 class="display-6 mb-5">Learn More What We Do And Get Involved</h1>
+<!-- Stats Start -->
+<section class="team-stats-section">
+    <div class="container">
+        <div class="stats-grid-elegant">
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.1s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="140">0</h3>
+                    <p class="stat-label-elegant">Active Members</p>
+                </div>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{{ url_for('static', filename='assets/img/icon-1.png') }}" alt="">
-                        <h4 class="mb-3">Child Education</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="{{ url_for('service') }}">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.2s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="12">0</h3>
+                    <p class="stat-label-elegant">Partner Schools</p>
+                </div>
+            </div>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.3s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="5">0</h3>
+                    <p class="stat-label-elegant">Strategic Directorates</p>
+                </div>
+            </div>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.4s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="360000">0</h3>
+                    <p class="stat-label-elegant">Impact Expended (UGX)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Stats End -->
+
+
+<!-- Causes Start -->
+<div class="container-xxl bg-light my-5 py-5">
+    <div class="container py-5">
+        <div class="section-header text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title">Featured Programs</h2>
+            <p class="section-subtitle">Highlighting our most impactful initiatives transforming communities</p>
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+        <section class="departments-overview">
+            <div class="container">
+                <div class="departments-grid">
+                    <div class="department-tile wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="department-icon-large">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="department-title">PHD Speech Academy</h3>
+                        <p class="department-description">Empowering youth through public speaking and scripture
+                            engagement, building confidence and communication skills.</p>
+                        <div class="department-stats">
+                            <span class="dept-stat">40+ Competitors</span>
+                            <span class="dept-stat">Speech Legends</span>
+                        </div>
+                    </div>
+                    <div class="department-tile wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="department-icon-large">
+                            <i class="fas fa-podcast"></i>
+                        </div>
+                        <h3 class="department-title">PHD Podcast Launch</h3>
+                        <p class="department-description">A platform for thought leadership, member storytelling, and
+                            institutional communications.</p>
+                        <div class="department-stats">
+                            <span class="dept-stat">Global Reach</span>
+                            <span class="dept-stat">Quarterly Episodes</span>
+                        </div>
+                    </div>
+                    <div class="department-tile wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="department-icon-large">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3 class="department-title">Music Department</h3>
+                        <p class="department-description">Creating original music that articulates PHD-FNI's vision
+                            and builds cultural identity.</p>
+                        <div class="department-stats">
+                            <span class="dept-stat">Original Songs</span>
+                            <span class="dept-stat">Branded Identity</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{{ url_for('static', filename='assets/img/icon-2.png') }}" alt="">
-                        <h4 class="mb-3">Medical Treatment</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="{{ url_for('service') }}">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- Causes End -->
+
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive services addressing diverse community needs</p>
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+
+<!-- Donate Start -->
+<section class="join-cta-modern">
+    <div class="cta-pattern"></div>
+    <div class="container py-5">
+        <div class="cta-content-modern text-center">
+            <div class="cta-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="cta-title">Thanks For The Results Achieved With You</h2>
+            <p class="cta-subtitle">Your generous donations help us transform communities and change lives across
+                Uganda.</p>
+            <div class="cta-buttons-modern">
+                <a href="{{ url_for('donate') }}" class="cta-btn primary">
+                    <i class="fas fa-donate"></i>
+                    Donate Now
+                </a>
+                <a href="{{ url_for('contact') }}" class="cta-btn secondary">
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                </a>
+            </div>
+            <div class="cta-contact">
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@phdsfamilynetwork.org</p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +256 123 456 789</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Donate End -->
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Team Members</div>
+            <h1 class="display-6 mb-5">Let's Meet With Our Ordinary Soldiers</h1>
+        </div>
+        <div class="team-grid-modern">
+            <div class="team-member-modern wow fadeInUp" data-wow-delay="0.1s">
+                <div class="member-card">
+                    <div class="member-visual"
+                        style="background: linear-gradient(135deg, var(--primary), var(--primary-light)); height: 200px;">
+                        <div class="member-accent"></div>
+                        <div class="member-role-badge">
+                            <span>CEO</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <h3 class="member-name">Asasira Blessed Moses</h3>
+                        <p class="member-bio">Chief Founder and visionary leader with extensive experience in community
+                            development.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Strategic Planning</span>
+                            <span class="expertise-tag">Community Development</span>
+                            <span class="expertise-tag">Nonprofit Management</span>
+                        </div>
+                        <div class="member-contact">
+                            <a href="https://linkedin.com/in/asasira-blessed-moses" class="contact-link"
+                                target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:asasira@phdsfamilynetwork.org" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://twitter.com/asasiraphd" class="contact-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{{ url_for('static', filename='assets/img/icon-3.png') }}" alt="">
-                        <h4 class="mb-3">Pure Drinking Water</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="{{ url_for('service') }}">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+            </div>
+            <div class="team-member-modern wow fadeInUp" data-wow-delay="0.2s">
+                <div class="member-card">
+                    <div class="member-visual"
+                        style="background: linear-gradient(135deg, var(--success), var(--primary-light)); height: 200px;">
+                        <div class="member-accent"></div>
+                        <div class="member-role-badge">
+                            <span>COO</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <h3 class="member-name">Magondu Raymond</h3>
+                        <p class="member-bio">Chief Operating Officer managing daily operations and ensuring program
+                            excellence across Uganda.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Operations</span>
+                            <span class="expertise-tag">Management</span>
+                            <span class="expertise-tag">Program Coordination</span>
+                        </div>
+                        <div class="member-contact">
+                            <a href="https://linkedin.com/in/magondu-raymond" class="contact-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:magondu@phdsfamilynetwork.org" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://twitter.com/magonduphd" class="contact-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- More team members are in team.html -->
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<!-- Partners Section (New) -->
+<div class="container-xxl py-5 bg-light">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="d-inline-block rounded-pill bg-white text-primary py-1 px-3 mb-3">Our Partners</div>
+            <h1 class="display-6 mb-5">Collaborating for Greater Impact</h1>
+        </div>
+        <div class="row g-4 justify-content-center align-items-center">
+            <!-- Generic Partner Placeholders using FontAwesome for now -->
+            <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="partner-item text-center opacity-75 grayscale-hover">
+                    <i class="fas fa-university fa-3x text-secondary mb-2"></i>
+                    <p class="small fw-bold">School Partner A</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="partner-item text-center opacity-75 grayscale-hover">
+                    <i class="fas fa-hospital fa-3x text-secondary mb-2"></i>
+                    <p class="small fw-bold">Medical Partner</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="partner-item text-center opacity-75 grayscale-hover">
+                    <i class="fas fa-church fa-3x text-secondary mb-2"></i>
+                    <p class="small fw-bold">Faith Group</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="partner-item text-center opacity-75 grayscale-hover">
+                    <i class="fas fa-hand-holding-water fa-3x text-secondary mb-2"></i>
+                    <p class="small fw-bold">Water Project</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="partner-item text-center opacity-75 grayscale-hover">
+                    <i class="fas fa-broadcast-tower fa-3x text-secondary mb-2"></i>
+                    <p class="small fw-bold">Media Partner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Partners End -->
+
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title">What People Say About Us</h2>
+            <p class="section-subtitle">Trusted by thousands of people and organizations across Uganda</p>
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">
+                    <i class="fas fa-quote-left"></i>
+                </span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-visual">
+                    <img class="testimonial-image" src="{{ url_for('static', filename='assets/img/testimonial-1.jpg') }}"
+                        alt="Community Leader">
+                    <div class="testimonial-accent"></div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"PHD Family Network has transformed our community through their dedicated programs and unwavering commitment to positive change."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4 class="author-name">Sarah Mukasa</h4>
+                        <span class="author-title">Community Leader</span>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="testimonial-visual">
+                    <img class="testimonial-image" src="{{ url_for('static', filename='assets/img/testimonial-2.jpg') }}"
+                        alt="Partner Organization">
+                    <div class="testimonial-accent"></div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Their educational programs have empowered hundreds of youth in our region. Truly making a difference in Uganda."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4 class="author-name">James Okello</h4>
+                        <span class="author-title">Education Partner</span>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card wow fadeInUp" data-wow-delay="0.5s">
+                <div class="testimonial-visual">
+                    <img class="testimonial-image" src="{{ url_for('static', filename='assets/img/testimonial-3.jpg') }}"
+                        alt="Volunteer">
+                    <div class="testimonial-accent"></div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Volunteering with PHD Family Network has been life-changing. The impact we create together is incredible."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4 class="author-name">Grace Nakato</h4>
+                        <span class="author-title">Dedicated Volunteer</span>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Testimonial End -->
+{% endblock %}
 
+{% block scripts %}
+<script>
+    // Counter animation
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
 
-    <!-- Donate Start -->
-    <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="{{ url_for('static', filename='assets/img/carousel-2.jpg') }}">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Donate Now</div>
-                    <h1 class="display-6 text-white mb-5">Thanks For The Results Achieved With You</h1>
-                    <p class="text-white-50 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="h-100 bg-white p-5">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-light border-0" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-light border-0" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="btn-group d-flex justify-content-around">
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked>
-                                        <label class="btn btn-light py-3" for="btnradio1">$10</label>
+        counters.forEach(counter => {
+            const animate = () => {
+                const value = +counter.getAttribute('data-count');
+                const data = +counter.innerText;
+                const time = value / speed;
 
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
-                                        <label class="btn btn-light py-3" for="btnradio2">$20</label>
+                if (data < value) {
+                    counter.innerText = Math.ceil(data + time);
+                    setTimeout(animate, 1);
+                } else {
+                    counter.innerText = value.toLocaleString();
+                }
+            }
 
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
-                                        <label class="btn btn-light py-3" for="btnradio3">$30</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary px-5" style="height: 60px;">
-                                        Donate Now
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Donate End -->
+            animate();
+        });
+    }
 
+    // Trigger counter animation when in viewport
+    const observerOptions = {
+        threshold: 0.5
+    };
 
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Team Members</div>
-                <h1 class="display-6 mb-5">Let's Meet With Our Ordinary Soldiers</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ url_for('static', filename='assets/img/team1.jpg') }}" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Asasira Blessed Moses</h5>
-                            <p class="text-primary">CEO</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ url_for('static', filename='assets/img/team2.jpg') }}" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Magondu Raymond</h5>
-                            <p class="text-primary">COO</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ url_for('static', filename='assets/img/team-3.jpg') }}" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ url_for('static', filename='assets/img/team-4.jpg') }}" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
 
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Testimonial</div>
-                <h1 class="display-6 mb-5">Trusted By Thousands Of People And Nonprofits</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ url_for('static', filename='assets/img/testimonial-1.jpg') }}" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ url_for('static', filename='assets/img/testimonial-2.jpg') }}" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ url_for('static', filename='assets/img/testimonial-3.jpg') }}" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-    {% include 'footer.html' %}
-</body>
-
-</html>
+    const statsSection = document.querySelector('.team-stats-section');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+</script>
+{% endblock %}

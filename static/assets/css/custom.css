@@ -1,0 +1,467 @@
+/* Existing Styles... (Keep previous styles if possible, but for safe overwrite I will include them or append. I will use append/replace with full content or smart replace. Since I extracted CSS previously, I should be careful not to lose it. I'll use read first to be safe or just use the extracted content I know.) */
+
+/* RE-INJECTING PREVIOUS STYLES + NEW ELEGANT STYLES */
+
+/* --- CORE VARIABLES --- */
+:root {
+    /* Non-Profit Theme: Trust, Heritage, & Warmth */
+    --primary: #1B3964;
+    /* Deep Royal Blue - Trust & Stability (Kingdom/Empire vibe) */
+    --primary-light: #2C5282;
+    /* Lighter Blue for gradients */
+    --accent: #C0392B;
+    /* Brick Red - Passion & Heart (Charity) / Less aggressive than neon red */
+    --accent-glow: rgba(192, 57, 43, 0.3);
+    --gold: #D4AF37;
+    /* Classic Gold - Excellence & Value */
+    --silver: #BDC3C7;
+    /* Neutral Balance */
+    --text-dark: #2C3E50;
+    /* Readable Dark Gray */
+    --text-light: #F8F9FA;
+    /* Soft White */
+
+    /* Modern Effects */
+    --glass-bg: rgba(255, 255, 255, 0.92);
+    /* Slightly more opaque for readability */
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --shadow-soft: 0 10px 30px rgba(27, 57, 100, 0.08);
+    /* Blue-tinted shadow for harmony */
+    --shadow-hover: 0 20px 40px rgba(27, 57, 100, 0.15);
+    --gradient-premium: linear-gradient(135deg, #fdfbfb 0%, #edf2f7 100%);
+    /* Cool white gradient */
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    /* Sophisticated headings */
+    --font-body: 'Source Sans 3', sans-serif;
+    /* Clean modern body */
+}
+
+/* --- GLOBAL TYPOGRAPHY & LAYOUT --- */
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.7;
+    background-color: #f8f9fa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* --- PREMIUM SECTION STYLING --- */
+.section-premium {
+    padding: 100px 0;
+    background: var(--gradient-premium);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232c3e50' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.section-header {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.divider-line {
+    height: 2px;
+    width: 60px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.divider-icon {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+/* --- MISSION, VISION, GOALS CARDS (ELEGANT FLIP OR GLASS) --- */
+.mission-card {
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-soft);
+    z-index: 2;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--gold);
+}
+
+.mission-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 10px 20px rgba(44, 62, 80, 0.2);
+    transition: all 0.4s ease;
+}
+
+.mission-card:hover .mission-icon {
+    background: linear-gradient(135deg, var(--accent), #c0392b);
+    transform: rotateY(360deg);
+}
+
+.mission-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.mission-text {
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* --- PROGRAM CARDS (PREMIUM) --- */
+.program-card-premium {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.program-card-premium:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.program-visual {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.program-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.program-card-premium:hover .program-visual img {
+    transform: scale(1.1);
+}
+
+.program-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(44, 62, 80, 0.8) 100%);
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+}
+
+.program-card-premium:hover .program-overlay {
+    opacity: 0.8;
+}
+
+.program-category {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.program-content {
+    padding: 30px;
+}
+
+.program-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.program-desc {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.btn-link-premium {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.btn-link-premium:hover {
+    gap: 12px;
+}
+
+/* --- STATS CARD (ELEGANT) --- */
+.stats-grid-elegant {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.stat-card-elegant {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.stat-card-elegant:hover {
+    transform: translateY(-10px);
+}
+
+.stat-icon-elegant {
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(45deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+.stat-number-elegant {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 5px;
+    font-family: var(--font-heading);
+}
+
+.stat-label-elegant {
+    color: #95a5a6;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+/* --- HERO SECTION REFINEMENTS --- */
+.team-hero-banner {
+    position: relative;
+    min-height: 85vh;
+    /* Taller hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.text-highlight {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    /* Outline effect */
+    font-style: italic;
+    position: relative;
+}
+
+.text-highlight::after {
+    content: attr(data-text);
+    /* Needs JS or manual match, using simpler CSS only for now */
+    /* Fallback simple highlight */
+    color: var(--gold);
+    -webkit-text-stroke: 0;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.btn-hero {
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.btn-hero.primary {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+}
+
+.btn-hero.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(231, 76, 60, 0.4);
+    background: #c0392b;
+}
+
+.btn-hero.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.btn-hero.secondary:hover {
+    background: white;
+    color: var(--primary);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .mission-card {
+        margin-bottom: 30px;
+    }
+}

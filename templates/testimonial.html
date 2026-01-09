@@ -1,61 +1,177 @@
-{% include 'header.html' %}
+{% extends 'base.html' %}
+{% block content %}
 
-
-    <!-- Page Header Start -->
-
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Testimonial</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Testimonial</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Testimonial</div>
-                <h1 class="display-6 mb-5">Trusted By Thousands Of People And Nonprofits</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ url_for('static', filename='assets/img/testimonial-1.jpg') }}" alt="Testimonial photo" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ url_for('static', filename='assets/img/testimonial-2.jpg') }}" alt="Testimonial photo" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ url_for('static', filename='assets/img/testimonial-3.jpg') }}" alt="Testimonial photo" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
+<!-- Hero Banner Start -->
+<section class="team-hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-text wow fadeInUp" data-wow-delay="0.2s">
+            <span class="hero-subtitle">Success Stories</span>
+            <h1 class="hero-title">What People <span class="text-highlight">Say About Us</span></h1>
+            <p class="hero-description">Hear from the communities, partners, and individuals whose lives have been
+                transformed through our programs and initiatives across Uganda.</p>
+            <div class="hero-actions">
+                <button class="btn-hero primary"
+                    onclick="document.getElementById('testimonials-content').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-arrow-down"></i>
+                    Read Stories
+                </button>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
-        
+    <div class="hero-scroll-indicator">
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+    </div>
+</section>
+<!-- Hero Banner End -->
 
-{% include 'footer.html' %}
+<!-- Testimonial Stats Start -->
+<section class="team-stats-section">
+    <div class="container">
+        <div class="stats-grid-elegant">
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.1s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="50">0</h3>
+                    <p class="stat-label-elegant">Testimonials</p>
+                </div>
+            </div>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.2s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="12">0</h3>
+                    <p class="stat-label-elegant">Partner Schools</p>
+                </div>
+            </div>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.3s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="5000">0</h3>
+                    <p class="stat-label-elegant">Beneficiaries</p>
+                </div>
+            </div>
+            <div class="stat-card-elegant wow fadeInUp" data-wow-delay="0.4s">
+                <div class="stat-icon-elegant">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number-elegant" data-count="15">0</h3>
+                    <p class="stat-label-elegant">Global Partners</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Stats End -->
+
+<!-- Testimonial Start -->
+<section id="testimonials-content" class="team-showcase">
+    <div class="container">
+        <div class="section-header text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Real experiences from people whose lives have been transformed</p>
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item text-center">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                    src="{{ url_for('static', filename='assets/img/testimonial-1.jpg') }}" alt="Testimonial photo"
+                    style="width: 100px; height: 100px;">
+                <div class="testimonial-text rounded text-center p-4">
+                    <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut
+                        diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                    </p>
+                    <h5 class="mb-1">Donor Name</h5>
+                    <span class="fst-italic">Profession</span>
+                </div>
+            </div>
+            <div class="testimonial-item text-center">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                    src="{{ url_for('static', filename='assets/img/testimonial-2.jpg') }}" alt="Testimonial photo"
+                    style="width: 100px; height: 100px;">
+                <div class="testimonial-text rounded text-center p-4">
+                    <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut
+                        diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                    </p>
+                    <h5 class="mb-1">Donor Name</h5>
+                    <span class="fst-italic">Profession</span>
+                </div>
+            </div>
+            <div class="testimonial-item text-center">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                    src="{{ url_for('static', filename='assets/img/testimonial-3.jpg') }}" alt="Testimonial photo"
+                    style="width: 100px; height: 100px;">
+                <div class="testimonial-text rounded text-center p-4">
+                    <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut
+                        diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                    </p>
+                    <h5 class="mb-1">Donor Name</h5>
+                    <span class="fst-italic">Profession</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial End -->
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Counter animation
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number-elegant');
+        const speed = 200;
+
+        counters.forEach(counter => {
+            const animate = () => {
+                const value = +counter.getAttribute('data-count');
+                const data = +counter.innerText;
+                const time = value / speed;
+
+                if (data < value) {
+                    counter.innerText = Math.ceil(data + time);
+                    setTimeout(animate, 1);
+                } else {
+                    counter.innerText = value.toLocaleString();
+                }
+            }
+
+            animate();
+        });
+    }
+
+    // Trigger counter animation when in viewport
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const statsSection = document.querySelector('.team-stats-section');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+</script>
+{% endblock %}

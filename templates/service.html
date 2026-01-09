@@ -1,76 +1,168 @@
-{% include 'header.html' %}
+{% extends 'base.html' %}
+{% block content %}
 
-
-    <!-- Page Header Start -->
-
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Service</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Service</li>
-                </ol>
-            </nav>
+<!-- Hero Banner Start -->
+<section class="team-hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-text wow fadeInUp" data-wow-delay="0.2s">
+            <span class="hero-subtitle">Our Services</span>
+            <h1 class="hero-title">What <span class="text-highlight">We Do</span></h1>
+            <p class="hero-description">Comprehensive services designed to address community needs, empower individuals,
+                and create sustainable impact through dedicated programs and initiatives.</p>
+            <div class="hero-actions">
+                <button class="btn-hero primary"
+                    onclick="document.getElementById('services-content').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-arrow-down"></i>
+                    Explore Services
+                </button>
+            </div>
         </div>
     </div>
-    <!-- Page Header End -->
+    <div class="hero-scroll-indicator">
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot"></div>
+    </div>
+</section>
+<!-- Hero Banner End -->
 
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-                <h1 class="display-6 mb-5">Learn More What We Do And Get Involved</h1>
+<!-- Service Start -->
+<section id="services-content" class="team-showcase">
+    <div class="container">
+        <div class="section-header text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive services addressing diverse community needs</p>
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon">
+                    <i class="fas fa-th-large"></i>
+                </span>
+                <span class="divider-line"></span>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{{ url_for('static', filename='assets/img/icon-1.png') }}" alt="">
-                        <h4 class="mb-3">Child Education</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="{{ url_for('contact') }}">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <!-- Service 1: Education -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/service-edu.jpg') }}"
+                            alt="Education Service">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Education</span>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{{ url_for('static', filename='assets/img/icon-2.png') }}" alt="">
-                        <h4 class="mb-3">Medical Treatment</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="{{ url_for('contact') }}">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{{ url_for('static', filename='assets/img/icon-3.png') }}" alt="">
-                        <h4 class="mb-3">Pure Drinking Water</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary px-3" href="{{ url_for('contact') }}">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Educational Support</h3>
+                        <p class="program-desc">We provide scholastic materials, exam success cards, and academic
+                            mentorship to students in over 12 partner schools.</p>
+                        <a href="{{ url_for('programs') }}" class="btn-link-premium">
+                            View Programs <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
+
+            <!-- Service 2: Public Speaking -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/service-speech.jpg') }}"
+                            alt="Public Speaking">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Skills</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Speech & Leadership</h3>
+                        <p class="program-desc">Through our Speech Academy, we offer training in public speaking,
+                            debate, and leadership for young people.</p>
+                        <a href="{{ url_for('programs') }}" class="btn-link-premium">
+                            Join Academy <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Creative Arts -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/service-arts.jpg') }}" alt="Creative Arts">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Arts</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Creative Arts Production</h3>
+                        <p class="program-desc">We produce original music, anthologies ("Echoes of Grace"), and podcasts
+                            to amplify youth voices and talent.</p>
+                        <a href="{{ url_for('programs') }}" class="btn-link-premium">
+                            Explore Arts <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Community Health -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/service-health.jpg') }}"
+                            alt="Community Health">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Health</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Community Wellness</h3>
+                        <p class="program-desc">Organizing medical camps, clean water initiatives, and health awareness
+                            campaigns for underserved areas.</p>
+                        <a href="{{ url_for('contact') }}" class="btn-link-premium">
+                            Book Service <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: Institutional Support -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/service-inst.jpg') }}"
+                            alt="Institutional Support">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Consultancy</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">School Partnerships</h3>
+                        <p class="program-desc">Partnering with schools to establish PHD clubs, improving student
+                            welfare and co-curricular engagement.</p>
+                        <a href="{{ url_for('contact') }}" class="btn-link-premium">
+                            Partner With Us <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6: Digital Services -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="program-card-premium">
+                    <div class="program-visual">
+                        <img src="{{ url_for('static', filename='assets/img/service-media.jpg') }}"
+                            alt="Media Services">
+                        <div class="program-overlay"></div>
+                        <span class="program-category">Media</span>
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-title">Media & Branding</h3>
+                        <p class="program-desc">Offering photography, videography, and digital branding services to
+                            support community projects and events.</p>
+                        <a href="{{ url_for('contact') }}" class="btn-link-premium">
+                            Contact Team <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Service End -->
-        
+</section>
+<!-- Service End -->
 
-{% include 'footer.html' %}
+{% endblock %}
