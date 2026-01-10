@@ -1,27 +1,25 @@
 {% include 'header.html' %}
 
-
-    <!-- Page Header Start -->
-
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+<!-- Hero Section Start -->
+    <div class="hero-jumbotron" style="min-height: 100vh; background: linear-gradient(135deg, #D2691E 0%, #A0522D 50%, #DEB887 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
         <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Testimonial</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Testimonial</li>
-                </ol>
-            </nav>
+            <div class="jumbotron-content">
+                <h1 class="display-3 text-white mb-4">Testimonials</h1>
+                <p class="lead text-white mb-5">
+                    Hear from partners and organizations who have experienced the transformative work of PHD Family Network in communities across Uganda. From mental health advocates to educational institutions and fashion industry leaders, our partners consistently recognize our commitment to youth empowerment and community transformation.
+                </p>
+                <a href="#testimonials" class="btn btn-hero-light btn-lg">
+                    <i class="fas fa-arrow-down me-2"></i>
+                    Read Testimonials
+                </a>
+            </div>
         </div>
     </div>
-    <!-- Page Header End -->
+    <!-- Hero Section End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="testimonials">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Testimonial</div>
@@ -56,6 +54,6 @@
         </div>
     </div>
     <!-- Testimonial End -->
-        
+
 
 {% include 'footer.html' %}

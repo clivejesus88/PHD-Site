@@ -1,61 +1,116 @@
 {% include 'header.html' %}
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="{{ url_for('static', filename='assets/img/carousel-1.jpg') }}" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Let's Change The World With Humanity</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="{{ url_for('about') }}">
-                                        Learn More
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+    <!-- Hero Section Start -->
+    <div class="hero-card-section pt-5" style="min-height: 100vh; background: linear-gradient(135deg, #D2691E 0%, #A0522D 50%, #DEB887 100%); position: relative; overflow: hidden;">
+        <!-- Background Pattern -->
+        <div class="hero-pattern position-absolute w-100 h-100">
+            <div class="pattern-grid"></div>
+        </div>
+        
+        <!-- Main Container -->
+        <div class="container pt-5">
+            <div class="row align-items-center min-vh-100">
+                <!-- Left Content -->
+                <div class="col-lg-6">
+                    <div class="hero-card-content">
+                        <!-- Welcome Badge -->
+                        <div class="hero-welcome-badge mb-4">
+                            <span class="badge bg-white text-primary px-4 py-2">
+                                <i class="fas fa-crown me-2"></i>
+                                Welcome to PHD Family Network
+                                <i class="fas fa-crown ms-2"></i>
+                            </span>
+                        </div>
+                        
+                        <!-- Main Title -->
+                        <h1 class="hero-main-title text-white mb-4">
+                            Pull Heaven Down
+                        </h1>
+                        
+                        <!-- Subtitle -->
+                        <h2 class="hero-subtitle text-white mb-4">
+                            Empowering Youth as <span class="text-white">Solution Givers</span>
+                        </h2>
+                        
+                        <!-- Description -->
+                        <p class="hero-description text-white-50 mb-5">
+                            Founded on February 15, 2025, we're transforming young people into leaders who impact communities through faith, talent, and purpose-driven service.
+                        </p>
+                        
+                        <!-- Action Buttons -->
+                        <div class="hero-actions">
+                            <a href="{{ url_for('about') }}" class="btn btn-hero-light me-3">
+                                <i class="fas fa-book me-2"></i>
+                                Our Story
+                            </a>
+                            <a href="{{ url_for('programs') }}" class="btn btn-hero-outline">
+                                <i class="fas fa-rocket me-2"></i>
+                                Join Movement
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="{{ url_for('static', filename='assets/img/carousel-2.jpg') }}" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Let's Save More Lifes With Our Helping Hand</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="{{ url_for('about') }}">
-                                        Learn More
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
+                
+                <!-- Right Side - Cards -->
+                <div class="col-lg-6">
+                    <div class="hero-cards-container">
+                        <!-- Top Card -->
+                        <div class="hero-card hero-card-top mb-4">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="card-icon bg-white text-primary rounded-circle p-3 me-3">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h5 class="text-white mb-0">Our Vision</h5>
                                 </div>
+                                <p class="text-white-75 mb-0">
+                                    Pull Heaven Down throughout the world by empowering youth to fulfill their God-given potential.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Middle Card -->
+                        <div class="hero-card hero-card-middle mb-4">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="card-icon bg-white text-primary rounded-circle p-3 me-3">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h5 class="text-white mb-0">Our Mission</h5>
+                                </div>
+                                <p class="text-white-75 mb-0">
+                                    Connect people, build capacity, deliver collective action, amplify influence, and cultivate talent.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom Card -->
+                        <div class="hero-card hero-card-bottom">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="card-icon bg-white text-primary rounded-circle p-3 me-3">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <h5 class="text-white mb-0">Our Impact</h5>
+                                </div>
+                                <p class="text-white-75 mb-0">
+                                    Creating quality training and mentorship programs for leadership development and life skills.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        </div>
+        
+        <!-- Bottom Wave -->
+        <div class="hero-wave position-absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z" fill="white"/>
+            </svg>
         </div>
     </div>
-    <!-- Carousel End -->
+    <!-- Hero Section End -->
 
 
     <!-- About Start -->
