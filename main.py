@@ -79,7 +79,7 @@ def contact():
             msg = EmailMessage(
             subject=subject,
             from_email=f"{name} <{email}>",
-            to=['phdfamilynetworkinternational@gmail.com'],
+            to=['phdsfamilynetworkinternational@gmail.com'],
         )
 
             msg.body = f"""
